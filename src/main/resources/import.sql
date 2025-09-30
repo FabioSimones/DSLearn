@@ -42,3 +42,22 @@ INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, avai
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (1, 3, TIMESTAMP WITH TIME ZONE '2020-12-10T16:00:00Z', null, true, false);
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2020-12-10T16:00:00Z', null, true, false);
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (2, 3, TIMESTAMP WITH TIME ZONE '2020-12-10T16:00:00Z', null, true, false);
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Primeira aula do capítulo 1', 1, 1);
+INSERT INTO tb_content (id, text_Content, video_Uri) VALUES (1, 'Material de apoio.', 'devfabiosimones.com.br');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Primeira aula do capítulo 2', 1, 2);
+INSERT INTO tb_content (id, text_Content, video_Uri) VALUES (2, 'Material de apoio.', 'devfabiosimones.com.br');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Primeira aula do capítulo 3', 1, 3);
+INSERT INTO tb_content (id, text_Content, video_Uri) VALUES (3, 'Material de apoio.', 'devfabiosimones.com.br');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Segunda aula do capítulo 1', 2, 4);
+INSERT INTO tb_content (id, text_Content, video_Uri) VALUES (4, 'Material de apoio.', 'devfabiosimones.com.br');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Tarefa do primeiro capítulo', 3, 1);
+INSERT INTO tb_task (id, description, question_Count, approval_Count, weight, due_Date) VALUES (1, 'Questionários do primeiro capítulo', 6, 5, 1.0, TIMESTAMP WITH TIME ZONE '2020-12-25T16:00:00Z');
+
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1);
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 2, 1);

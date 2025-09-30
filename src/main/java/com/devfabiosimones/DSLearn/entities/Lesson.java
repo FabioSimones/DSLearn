@@ -1,6 +1,5 @@
 package com.devfabiosimones.DSLearn.entities;
 
-import com.devfabiosimones.DSLearn.Enrollment;
 import jakarta.persistence.*;
 
 import java.io.Serializable;

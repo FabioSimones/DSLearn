@@ -1,15 +1,12 @@
-package com.devfabiosimones.DSLearn;
+package com.devfabiosimones.DSLearn.entities;
 
-import com.devfabiosimones.DSLearn.entities.Offer;
-import com.devfabiosimones.DSLearn.entities.User;
 import com.devfabiosimones.DSLearn.pk.EnrollmentPK;
-import jakarta.persistence.Column;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_enrollment")
@@ -26,6 +23,9 @@ public class Enrollment implements Serializable {
     private Instant refundMoment;
     private boolean available;
     private boolean onlyUpdate;
+
+    @ManyToMany(mappedBy = "enrollmentsDone")
+    private Set<Lesson> lessonsDone = new HashSet<>();
 
     public Enrollment(){
 
